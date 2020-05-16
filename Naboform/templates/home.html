@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %} COMPRAMOSTUSNABOS {% endblock %}
+
+
+{% block content %}
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<script type="text/javascript"
+    src="https://platform-api.sharethis.com/js/sharethis.js#property=5ebe69465e01a80012b95009&product=inline-share-buttons"
+    async="async"></script>
+
+<body>
+    <hr / >
+    <h5 Style="background-color: #f8bc64; text-align:center">Recuerda que los datos se eliminarán a la hora indicada.
+        No nos hacemos responsables de lo que pase en la comunicación.
+        <p style="color:red">Para reportar conductas inadecuadas acude a la pestaña de contacto.</p>
+    <hr>
+    </h5>
+    <hr / >
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>Usuario</th>
+                <th>Precio</th>
+                <th>Entrada</th>
+                <th>Contacto</th>
+                <th>Caducidad</th>
+        </thead>
+        </tr>
+        <tbody>
+            {% for infonabo in infonabos %}
+            <tr>
+                <td>{{infonabo.usuario}}</td>
+                <td>{{infonabo.precio}}</td>
+                <td>{{infonabo.entrada}}</td>
+                <td>{{infonabo.contacto}}</td>
+                <td>{{infonabo.time}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="sharethis-inline-share-buttons"></div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    {% endblock %}

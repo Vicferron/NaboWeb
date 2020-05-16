@@ -1,0 +1,51 @@
+{% load static %}
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <title>
+    {% block title %} {% endblock %}
+  </title>
+
+
+</head>
+
+<body style="background-color:skyblue;">
+  <div class="container-fluid">
+    <h1 style="background-color:  #f8bc64  ; color: black ; text-align:center">
+      <hr>
+      <img src="{% static 'Naboform/imagenes/indice1.jpg' %}" class="img-fluid" />
+      <hr>
+    </h1>
+    <ul class="nav nav-pills nav-fill" style="background-color:#f8bc64;">
+
+      <li class="nav-item">
+        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000">Home</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000/form/">Formulario</a>
+      </li>
+
+      <li class="nav-item" style="color:blue">
+        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000/contacto/">Contacto</a>
+
+    </ul>
+    <div class="col-md-12">
+      {% block content %} {% endblock %}
+    </div>
+    <h5 style="background-color: #f8bc64; color:black; text-align:center">
+      <hr>Tenga cuidado vender nabos puede ser altamente adictivo.
+      <hr>
+      </h2>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</html>

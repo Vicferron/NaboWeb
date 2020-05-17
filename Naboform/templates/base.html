@@ -21,15 +21,15 @@
     <ul class="nav nav-pills nav-fill" style="background-color:#f8bc64;">
 
       <li class="nav-item">
-        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000">Home</a>
+        <a class="nav-link " style="color:black" href="{% url 'home' %}">Home</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000/form/">Formulario</a>
+        <a class="nav-link " style="color:black" href="{% url 'form' %}">Formulario</a>
       </li>
 
       <li class="nav-item" style="color:blue">
-        <a class="nav-link " style="color:black" href="http://127.0.0.1:8000/contacto/">Contacto</a>
+        <a class="nav-link " style="color:black" href="{% url 'contacto' %}">Contacto</a>
 
     </ul>
     <div class="col-md-12">

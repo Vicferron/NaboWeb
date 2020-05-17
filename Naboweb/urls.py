@@ -16,11 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Naboform import views
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('form/', views.Naboform),
-    path('contacto/', views.contacto),
+    path('form/', views.Naboform, name='form'),
+    path('contacto/', views.contacto, name='contacto'),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

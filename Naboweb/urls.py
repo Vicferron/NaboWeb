@@ -24,5 +24,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('form/', views.Naboform, name='form'),
     path('contacto/', views.contacto, name='contacto'),
-
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    path('static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT}),
+] 

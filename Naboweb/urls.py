@@ -24,5 +24,4 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('form/', views.Naboform, name='form'),
     path('contacto/', views.contacto, name='contacto'),
-    path('static/(?P<path>.*)$', 'django.views.static.serve', {'document_root':settings.STATIC_ROOT}),
-] 
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) 

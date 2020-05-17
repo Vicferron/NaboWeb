@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'cbt42m86q4#k9-l@!0vdh71jd#xa(7b&*swd94x$f@w$i2s1(2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", True)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOST", "*").split(",")
 
 
 # Application definition
@@ -73,23 +73,24 @@ WSGI_APPLICATION = 'Naboweb.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.sqlite3',
-#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#    }
-#}
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'NaboSQL',
-        'USER': 'postgres',
-        'PASSWORD': '222222',
-        'HOST': '127.0.0.1',
-        'DATABASE_PORT':'5432',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'dbauub9s3mg6sf',
+            'USER': 'yijxyxvjisseje',
+            'PASSWORD': '5c50ebc270323b101599943bcfe688f771f0347036b814a4be41b341347cf67b',
+            'HOST': 'ec2-52-207-25-133.compute-1.amazonaws.com',
+            'DATABASE_PORT':'5432',
+        }
+    }
 
 
 

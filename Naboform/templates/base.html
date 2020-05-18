@@ -1,6 +1,7 @@
 {% load static %}
+{% load staticfiles cookielaw_tags %}
 <html>
-
+  <link href="{% static "cookielaw/css/cookielaw.css"%}" rel="stylesheet" />
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-166949727-1"></script>
@@ -54,6 +55,8 @@
       {% block content %} {% endblock %}
     </div>
     <h5 style="background-color: #f8bc64; color:black; text-align:center">
+      {% cookielaw_banner %}
+      <script src="{% static "cookielaw/js/cookielaw.js"%}" type="text/javascript"></script>
       <hr>
       <p>Página creada y gestionada por:</p>
       <a href="https://twitter.com/TrueHatex?ref_src=twsrc%5Etfw" class="twitter-follow-button"

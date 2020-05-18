@@ -12,7 +12,9 @@
 
 <body>
     <hr>{{form.errors}}
-
+    {% if form.errors %}
+        <p style="color: red;">Por favor revisa este campo.</p>
+    {% endif %}
     <body>
         <h1>Contáctanos</h1>
         <form action="/contacto/" method="POST">{% csrf_token %}

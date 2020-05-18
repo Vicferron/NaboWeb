@@ -48,17 +48,30 @@
     });
   </script>
   {% load i18n %}
-  <div class="modal fade in" id="myModal" role="dialog" style="display: block; padding-right: 17px;"><div class="modal-dialog"><!-- Modal content-->
-    <div class="modal-content"><div class="modal-header">
-        <h4 class="modal-title">Politica de cookies</h4><button class="close" data-dismiss="modal" type="button">×</button></div><div class="modal-body">{% trans "Utilizamos cookies propias y de terceros para ofrecer nuestros servicios, mostrar publicidad y recoger información estadística. Al continuar con la navegación entendemos que lo acepta. Puede encontrar información sobre cómo borrar las cookies de su navegador en " %}<a href="https://www.google.com/search?q=borrar+cookies+navegador">Google</a>.
-</div><div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">cerrar</button>
-      </div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
-<script type="text/javascript">
- $(function(){
-  $("#myModal").modal();
- });
-</script>
+  <div class="modal fade in" id="myModal" role="dialog" style="display: block; padding-right: 17px;">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Politica de cookies</h4><button class="close" data-dismiss="modal"
+            type="button">×</button>
+        </div>
+        <div class="modal-body">
+          {% trans "Utilizamos cookies propias y de terceros para ofrecer nuestros servicios, mostrar publicidad y recoger información estadística. Al continuar con la navegación entendemos que lo acepta. Puede encontrar información sobre cómo borrar las cookies de su navegador en " %}<a
+            href="https://www.google.com/search?q=borrar+cookies+navegador">Google</a>.
+        </div>
+        <div class="modal-footer"><button class="btn btn-default" data-dismiss="modal" type="button">cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#myModal").modal();
+    });
+  </script>
   <script data-ad-client="ca-pub-6265438632427762" async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta charset="UTF-8">

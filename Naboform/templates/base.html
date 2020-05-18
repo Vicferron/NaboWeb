@@ -7,8 +7,17 @@
   <title>
     {% block title %} {% endblock %}
   </title>
-  <script data-ad-client="ca-pub-6265438632427762" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script data-ad-client="ca-pub-6265438632427762" async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <meta charset="UTF-8">
+  <title>Floating Discord Button</title>
 
+
+  <link rel='stylesheet prefetch'
+    href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.4/css/all.css'>
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body style="background-color:skyblue;">
@@ -35,12 +44,27 @@
     <div class="col-md-12">
       {% block content %} {% endblock %}
     </div>
-    <h5 style="background-color: #f8bc64; color:black; text-align:left">
+    <h5 style="background-color: #f8bc64; color:black; text-align:center">
       <hr>
-      <hr><a href="https://twitter.com/TrueHatex?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TrueHatex</a>
-      <p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a href="http://twitch.tv/jcarrillo_clx"><img src="http://streambadge.com/twitch/custom/2b2b2b/b9a3e3/808080/jcarrillo_clx.png" width="300" height="64" alt="jcarrillo_clx's Streambadge" style="text-align:right"></a>
-      </p>
-      </h5>
+      <p>Página creada y gestionada por:</p>
+      <a href="https://twitter.com/TrueHatex?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+        data-show-count="false">Follow @TrueHatex</a>
+      <p>Sigue a nuestro Streamer en Twitch</p>
+      <p>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script><a
+          href="http://twitch.tv/jcarrillo_clx"><img
+            src="http://streambadge.com/twitch/custom/2b2b2b/b9a3e3/808080/jcarrillo_clx.png" width="300" height="64"
+            alt="jcarrillo_clx's Streambadge" style="text-align:right"></a>
+      <a href="#discord_link_here" target="_blank">
+        <div class="btn btn-dark floating-btn">
+          <i class="icon fab fa-discord"></i>
+          <div class="expanded">
+            <span>
+              <i class="far fa-comments"></i> Habla con nosotros en nuestro Discord.</span>
+          </div>
+        </div>
+        </p>
+    </h5>
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

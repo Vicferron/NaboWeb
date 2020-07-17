@@ -1,4 +1,4 @@
-from django.db import models
+ºfrom django.db import models
 
 # Create your models here.
 
